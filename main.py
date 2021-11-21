@@ -45,6 +45,7 @@ commands = """
 "~afk <afk message>": sets your AFK (only for mods)
 "~anime <name>": returns image of anime and MyAnimeList URL)
 "~hotlines": returns international suicide hotlines
+"~say <message to say>": say thing (only works for staff members)
 """
 
 @bot.event
