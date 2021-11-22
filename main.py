@@ -15,6 +15,7 @@ import random
 import define
 import currency
 from anime import getAnime
+from insult import inSult
 
 load_dotenv()
 
@@ -53,7 +54,7 @@ async def on_ready():
   print("logged in")
   loopTask.start()
   #pingRole.start()
-  uselessFact.start()
+  #uselessFact.start()
 
 
 @bot.event
@@ -374,6 +375,15 @@ async def on_message(message):
             
           except Exception as e:
             print(e)
+
+  #INSULT#
+  #INSULT#
+  if message.content.startswith("~insult"):
+    try:
+      inslt = inSult()
+      await message.channel.send(f"{inslt} <@{message.author.id}>")
+    except Exception as err:
+      print(err)
 
 #USELESSFACT#
 #USELESSFACT#
