@@ -10,15 +10,13 @@ def createFact(message):
   fact = userafact[1].split('"', 1)[0]
   print(fact)
   user = userafact[0]
-  for string in userlist:
-    if string == user:
-      print("yes")
-      with open("facts.json", "r") as rfile:
-        data = json.load(rfile)
+  print("yes")
+  with open("facts.json", "r") as rfile:
+    data = json.load(rfile)
       
-      with open("facts.json", "w") as wfile:
-        data[user] = fact
-        json.dump(data, wfile, indent=2)
+  with open("facts.json", "w") as wfile:
+    data[user] = fact
+    json.dump(data, wfile, indent=2)
 
 def getFact():
   with open("facts.json", "r") as rfile:
