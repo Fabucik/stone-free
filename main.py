@@ -414,14 +414,4 @@ async def loopTask():
 
     json.dump(data, file, indent=2)
 
-@tasks.loop(seconds = 10)
-async def pingRole():
-  try:
-    if (time.time() - revtime) >= 1800 and (time.time() - mestime) >= 600:
-      channel = bot.get_channel(818864719217295400)
-      await channel.send("<@&{0}> talk ;-;".format(818625208902352898))
-
-  except Exception as e:
-    print(e)
-
 bot.run(TOKEN)
