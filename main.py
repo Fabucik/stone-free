@@ -32,21 +32,21 @@ intent.members = True
 bot = discord.Client(intents=intent, activity=discord.Game("with your mom"))
 
 commands = """
-"~jgif": returns random jojo gif
-"~cimg": returns random cat image
-"~cgif": returns random cat gif
-"~addfact <username> <"fact">": adds fact about staff member to the database
-"~fact <username>": returns fact about the staff member
-"~randomfact": returns fact about random staff member
-"~giveaway <role id>": chooses random user that is also member of the role id argument
-"~acd": returns most active chat in the last 10 minutes
-"~stand": returns random stand and stand stats from anime
-"~define <thing to define>": returns definiton pf given parameter
-"~exchange <from> <to> <amount>": exchanges currencies
-"~afk <afk message>": sets your AFK (only for mods)
-"~anime <name>": returns image of anime and MyAnimeList URL)
-"~hotlines": returns international suicide hotlines
-"~say <message to say>": say thing (only works for staff members)
+~jgif: returns random jojo gif
+~cimg: returns random cat image
+~cgif: returns random cat gif
+~addfact <username> <fact>: adds fact about staff member to the database
+~fact <username>: returns fact about the staff member
+~randomfact: returns fact about random staff member
+~giveaway <role id>: chooses random user that is also member of the role id argument
+~acd: returns most active chat in the last 10 minutes
+~stand: returns random stand and stand stats from anime
+~exchange <from> <to> <amount>: exchanges currencies
+~afk <afk message>: sets your AFK (only for mods)
+~anime <name>: returns image of anime and MyAnimeList URL)
+~hotlines: returns international suicide hotlines
+~say <message to say>: say thing (only works for staff members)
+~insult <person to insult>: insults person lol
 """
 
 @bot.event
@@ -250,20 +250,20 @@ async def on_message(message):
     
   #DEFINE#
   #DEFINE#
-  if message.content.startswith("~define"):
-    try:
-      mes = message.content.split("~define ", 1)[1]
-      definition = define.define(mes)
-      await message.channel.send(definition)
-    except Exception as e:
-      print(e)
+  #if message.content.startswith("~define"):
+  # try:
+  #   mes = message.content.split("~define ", 1)[1]
+  #   definition = define.define(mes)
+  #   await message.channel.send(definition)
+  # except Exception as e:
+  #   print(e)
       
-  if message.content.startswith("~define fabucik") or message.content.startswith("~define Fabucik"):
-    try:
-      await message.channel.send("The creator of this bot aka Stone Free")
+  #if message.content.startswith("~define fabucik") or message.content.startswith("~define Fabucik"):
+  # try:
+  #   await message.channel.send("The creator of this bot aka Stone Free")
       
-    except Exception as e:
-      print(e)
+  # except Exception as e:
+  #   print(e)
       
       
   #EXCHANGE#
