@@ -1,11 +1,10 @@
 import json
 import random
 
-userlist = ["fabucik", "jonathan", "jake", "che", "xbox", "rook", "caesar", "cecee", "xander", "phantom", "hei", "black", "fred", "jish", "ralze"]
 
 def createFact(message):
   mes = message.content.split("~addfact ", 1)
-  userafact = mes[1].split(' "', 1)
+  userafact = mes[1].split(' "', 1) or mes[1].split(' ”', 1)
   print(userafact)
   fact = userafact[1].split('"', 1)[0]
   print(fact)
